@@ -1,19 +1,21 @@
+/* eslint-disable */
 <template>
   <div>
-    <PrimeiroComponente/>
-    <LifeCycle/>
+    <PrimeiroComponente />
+    <LifeCycle />
   </div>
- 
 </template>
 
 <script>
-import LifeCycle from './components/LifeCycle.vue';
-import PrimeiroComponente from './components/PrimeiroComponente.vue'
+import LifeCycle from "./components/LifeCycle.vue";
+import PrimeiroComponente from "./components/PrimeiroComponente.vue";
+
 export default {
   name: "App",
-  components:{
+  components: {
     PrimeiroComponente,
-    LifeCycle
+    LifeCycle,
   },
 };
 </script>
+/* eslint-disable */
