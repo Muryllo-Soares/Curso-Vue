@@ -1,5 +1,9 @@
 <template>
-  <img :src="avatar" :alt="descricao"/>
+<div>
+  <button @click="showImagem">Mudar imagem</button>
+  <img  :src="avatar" :alt="descricao"/>
+</div>
+
 </template>
 
 <script>
@@ -8,9 +12,21 @@ export default {
   data() {
     return {
       avatar: "/img/avatar.png",
-      descricao: "Muryllo Soares"
+      outroavatar: "/img/linkedin.png",
+      descricao: "Muryllo Soares",
+      
     }
   },
+  methods:{
+    showImagem(){
+        if(this.avatar == this.avatar){
+          this.avatar = this.outroavatar
+        } else(
+          this.avatar = "/img/avatar.png"
+        )
+        
+    }
+  }
 };
 </script>
 
