@@ -19,6 +19,6 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 15px;
-  
+  list-style: none;
 }
 </style>
