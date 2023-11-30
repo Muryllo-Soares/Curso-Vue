@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{email}}</p>
     <h1>Olá Vue</h1>
     <p>Meu nome é {{ nome }} e trabalho como {{ profissao }}</p>
 
@@ -50,13 +51,17 @@ export default {
   components: {
     Picture,
   },
+  props:{
+        email: String,
+        estou_trabalhando: Boolean,
+      },
   data() {
     return {
       nome: "Muryllo",
       profissao: "programador",
-      estou_trabalhando: false,
+      
       mostrar_email: false,
-      email: "Muryllo428@gmail.com",
+      
       github: "https://github.com/Muryllo-Soares",
       textoBotao: "Mostrar email",
       backend_technologies: ['Javascript', 'PHP', 'Python'],
@@ -65,7 +70,7 @@ export default {
         {id: 2, language:"CSS"},
         {id: 3, language:"VUE"},
         
-      ]
+      ],
     };
   },
   methods:{

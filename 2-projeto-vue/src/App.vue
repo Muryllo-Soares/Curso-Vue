@@ -1,8 +1,9 @@
 /* eslint-disable */
 <template>
   <div>
-    <Header/>
-    <PrimeiroComponente />
+    <Header :esta_logado=true />
+    <!-- é possivel passar props das 2 maneiras como objeto determinando o tipo e array não determinando o tipo, e também dados dinamicos via data ou tipados como string boolean etc.. -->
+    <PrimeiroComponente :email="email" :estou_trabalhando=true />
     <LifeCycle />
     <FormProject/>
     <br>
@@ -27,6 +28,11 @@ export default {
     FormProject,
     MultiplosEventos,
   },
+  data (){
+    return {
+      email: "Muryllo428@gmail.com"
+    }
+  }
 };
 </script>
 

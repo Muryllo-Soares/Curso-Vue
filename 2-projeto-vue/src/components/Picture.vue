@@ -1,14 +1,18 @@
 <template>
 <div>
-  <button @click="showImagem">Mudar imagem</button>
   <img  :src="avatar" :alt="descricao"/>
+  <MudarImagem @mudar-imagem="trocarImagem" />
 </div>
 
 </template>
 
 <script>
+import MudarImagem from "./MudarImagem.vue"
 export default {
   name: "PicurteFile",
+  components:{
+    MudarImagem
+  },
   data() {
     return {
       avatar: "/img/avatar.png",
@@ -18,13 +22,8 @@ export default {
     }
   },
   methods:{
-    showImagem(){
-        if(this.avatar == this.avatar){
-          this.avatar = this.outroavatar
-        } else(
-          this.avatar = "/img/avatar.png"
-        )
-        
+    trocarImagem(){
+      this.avatar = this.outroavatar
     }
   }
 };
